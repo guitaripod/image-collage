@@ -20,13 +20,13 @@ $ image-collage img1.jpg img2.jpg img3.jpg img4.jpg
 
 ##  Features
 
-- ** Blazing Fast** - Built in Rust for maximum performance
-- ** Smart Cropping** - Automatically center-crops images to perfect squares
-- ** Two Modes** - CLI for automation, TUI for interactive selection
-- ** Vim Controls** - Navigate with familiar `j`/`k`/`h`/`l` keys in TUI mode
-- ** Format Support** - JPEG, PNG, GIF, BMP, WebP, TIFF input formats
-- ** Cross-Platform** - Works on Linux, macOS, and Windows
-- ** Standalone** - Single binary, no dependencies required
+- **Blazing Fast** - Built in Rust for maximum performance
+- **Smart Cropping** - Automatically center-crops images to perfect squares
+- **Two Modes** - CLI for automation, TUI for interactive selection
+- **Vim Controls** - Navigate with familiar `j`/`k`/`h`/`l` keys in TUI mode
+- **Format Support** - JPEG, PNG, GIF, BMP, WebP, TIFF input formats
+- **Cross-Platform** - Works on Linux, macOS, and Windows
+- **Standalone** - Single binary, no dependencies required
 
 ##  Screenshots
 

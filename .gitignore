@@ -16,12 +16,12 @@ Cargo.lock
 *~
 .DS_Store
 
-# Test outputs
-*.jpg
-*.png
-*.gif
-*.bmp
-collage.*
+# Test outputs (in root only)
+/*.jpg
+/*.png
+/*.gif
+/*.bmp
+/collage.*
 !examples/**/*
 
 # Temporary files

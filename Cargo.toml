@@ -1,7 +1,15 @@
 [package]
 name = "image-collage"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+authors = ["guitaripod"]
+description = "Create beautiful 2x2 image collages with a blazing-fast Rust CLI and TUI"
+readme = "README.md"
+homepage = "https://github.com/guitaripod/image-collage"
+repository = "https://github.com/guitaripod/image-collage"
+license = "MIT OR Apache-2.0"
+keywords = ["image", "collage", "photo", "cli", "tui"]
+categories = ["command-line-utilities", "multimedia::images"]
 
 [dependencies]
 image = "0.25"

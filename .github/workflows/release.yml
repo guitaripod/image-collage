@@ -12,19 +12,17 @@ jobs:
   create-release:
     name: Create Release
     runs-on: ubuntu-latest
-    outputs:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
+      - uses: actions/checkout@v4
+      
       - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          tag_name: ${{ github.ref_name }}
-          release_name: ${{ github.ref_name }}
-          draft: false
-          prerelease: false
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh release create ${{ github.ref_name }} \
+            --title "${{ github.ref_name }}" \
+            --notes "Release ${{ github.ref_name }}" \
+            --target ${{ github.sha }}
 
   build-release:
     name: Build Release
@@ -73,11 +71,9 @@ jobs:
           7z a ../../../image-collage-${{ github.ref_name }}-${{ matrix.target }}.zip ${{ matrix.binary }}
       
       - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: ./image-collage-${{ github.ref_name }}-${{ matrix.target }}.${{ matrix.archive }}
-          asset_name: image-collage-${{ github.ref_name }}-${{ matrix.target }}.${{ matrix.archive }}
-          asset_content_type: application/octet-stream
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh release upload ${{ github.ref_name }} \
+            ./image-collage-${{ github.ref_name }}-${{ matrix.target }}.${{ matrix.archive }} \
+            --clobber

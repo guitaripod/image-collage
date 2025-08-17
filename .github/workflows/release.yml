@@ -73,7 +73,4 @@ jobs:
       - name: Upload Release Asset
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          gh release upload ${{ github.ref_name }} \
-            ./image-collage-${{ github.ref_name }}-${{ matrix.target }}.${{ matrix.archive }} \
-            --clobber
+        run: gh release upload ${{ github.ref_name }} ./image-collage-${{ github.ref_name }}-${{ matrix.target }}.${{ matrix.archive }} --clobber

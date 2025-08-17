@@ -28,7 +28,7 @@ $ image-collage img1.jpg img2.jpg img3.jpg img4.jpg
 - **Cross-Platform** - Works on Linux, macOS, and Windows
 - **Standalone** - Single binary, no dependencies required
 
-##  Screenshots
+##  Visual Examples
 
 ### TUI Mode (Interactive File Browser)
 
@@ -52,8 +52,6 @@ $ image-collage img1.jpg img2.jpg img3.jpg img4.jpg
 │ Selected: sunset_.jpg, mountain_view.png, lake_reflection.jpg   │
 └─────────────────────────────────────────────────────────────────┘
 ```
-
-### Visual Examples
 
 #### With Thin Border (default: 2px)
 ```

@@ -22,7 +22,9 @@ Cargo.lock
 /*.gif
 /*.bmp
 /collage.*
-!examples/**/*
+
+# Example outputs
+/examples/
 
 # Temporary files
 *.tmp
